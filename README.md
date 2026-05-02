@@ -1,5 +1,4 @@
-<div align="center">
-  <img src="./public/assets/manygames.png" width="90" alt="Puzz Logo">
+<div align="center"
   <h1>Puzz</h1>
   <p><strong>Hub de Jogos Moderno e Offline (PWA)</strong></p>
 </div>
@@ -23,13 +22,13 @@ Este projeto foi construído utilizando tecnologias modernas de front-end:
 
 Atualmente, o Puzz conta com uma coleção variada de jogos, cada um com sua própria identidade visual neon:
 
-- **2048**: Combine blocos para alcançar o mágico 2048! (Tema: Neon Roxo)
-- **Wordle**: Adivinhe a palavra secreta em 6 tentativas. (Tema: Neon Verde)
-- **Quebra-cabeça (Slide Puzzle)**: Deslize as peças para montar a imagem. (Tema: Neon Ciano)
-- **Jogo da Memória (Memory Match)**: Encontre os pares e evite as bombas! (Tema: Neon Rosa)
-- **Cobrinha (Snake Arcade)**: O clássico jogo da cobrinha em uma versão arcade moderna. (Tema: Neon Amarelo)
-- **Neon Racer**: Um jogo de corrida retrô onde você desvia de obstáculos em alta velocidade. (Tema: Neon Laranja)
-- **Jogo da Velha (Tic-Tac-Toe)**: Desafie um amigo ou a inteligência artificial. (Tema: Neon Vermelho/Azul)
+- **2048**: Combine blocos para alcançar o mágico 2048! 
+- **Wordle**: Adivinhe a palavra secreta em 6 tentativas. 
+- **Quebra-cabeça (Slide Puzzle)**: Deslize as peças para montar a imagem. 
+- **Jogo da Memória (Memory Match)**: Encontre os pares e evite as bombas! 
+- **Cobrinha (Snake Arcade)**: O clássico jogo da cobrinha em uma versão arcade moderna.
+- **Neon Racer**: Um jogo de corrida retrô onde você desvia de obstáculos em alta velocidade. 
+- **Jogo da Velha (Tic-Tac-Toe)**: Desafie um amigo ou a inteligência artificial.
 
 ## ✨ Funcionalidades
 
