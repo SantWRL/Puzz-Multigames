@@ -149,7 +149,7 @@ export default function SnakeBoard() {
   return (
     <>
       <PageMeta
-        title="ManyGames | Cobrinha"
+        title="Puzz-Multigames | Cobrinha"
         description="Jogue o clássico jogo da cobrinha (Snake) com uma estética Neon."
       />
       <div className="relative flex flex-col items-center justify-center gap-6 lg:flex-row-reverse lg:items-start lg:justify-start lg:pt-8">

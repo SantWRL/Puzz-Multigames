@@ -16,7 +16,7 @@ const LINKS: LinkType[] = [
     emoji: "🧩",
     games: [
       { name: "Quebra-cabeça", link: "puzzle", color: "#22d3ee" },
-      { name: "2048", link: "2048", color: "#a78bfa" },
+      { name: "2048", link: "2048", color: "#60a5fa" },
     ],
   },
   {

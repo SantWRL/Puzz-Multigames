@@ -233,7 +233,7 @@ export default function GameBoard() {
       <PageMeta title="Puzz | 2048" description="Play 2048 online" />
       <div className="flex w-full justify-between gap-6 lg:w-auto lg:flex-col">
         <div className="flex flex-row gap-2 lg:flex-col">
-          <div className="inline flex-col items-center justify-center rounded-xl bg-white/5 px-2 py-2 text-neon-purple-light border border-neon-purple/20 shadow-[0_0_15px_rgba(139,92,246,0.1)] backdrop-blur-md md:px-5">
+          <div className="inline flex-col items-center justify-center rounded-xl bg-white/5 px-2 py-2 text-neon-blue-light border border-neon-blue/20 shadow-[0_0_15px_rgba(59,130,246,0.1)] backdrop-blur-md md:px-5">
             <span className="text-[10px] uppercase tracking-widest sm:text-xs">Placar</span>
             <p className="text-base font-semibold sm:text-3xl">
               {boardStore.score}
@@ -251,9 +251,9 @@ export default function GameBoard() {
             aria-label="Reiniciar jogo"
             onClick={() => dispatchState({ type: "INITIAL" })}
             type="button"
-            className="flex h-8 w-8 items-center justify-center rounded-xl bg-white/5 border border-white/10 transition-all hover:bg-neon-purple/20 hover:border-neon-purple/30 sm:h-10 sm:w-10 group"
+            className="flex h-8 w-8 items-center justify-center rounded-xl bg-white/5 border border-white/10 transition-all hover:bg-neon-blue/20 hover:border-neon-blue/30 sm:h-10 sm:w-10 group"
           >
-            <ArrowPathIcon className="h-6 w-6 stroke-gray-400 transition-all group-hover:stroke-neon-purple-light sm:h-7 sm:w-7" />
+            <ArrowPathIcon className="h-6 w-6 stroke-gray-400 transition-all group-hover:stroke-neon-blue-light sm:h-7 sm:w-7" />
           </button>
         </div>
       </div>
@@ -305,7 +305,7 @@ export default function GameBoard() {
                 ? "Novo recorde "
                 : "Placar "}
             </span>
-            <span className="text-2xl font-bold text-neon-purple-light">
+            <span className="text-2xl font-bold text-neon-blue-light">
               {boardState.score}
             </span>
           </div>
@@ -314,9 +314,9 @@ export default function GameBoard() {
               aria-label="Reiniciar jogo"
               onClick={() => dispatchState({ type: "INITIAL" })}
               type="button"
-              className="flex h-8 w-8 items-center justify-center rounded-xl bg-white/5 border border-white/10 transition-all hover:bg-neon-purple/20 hover:border-neon-purple/30 sm:h-10 sm:w-10 group"
+              className="flex h-8 w-8 items-center justify-center rounded-xl bg-white/5 border border-white/10 transition-all hover:bg-neon-blue/20 hover:border-neon-blue/30 sm:h-10 sm:w-10 group"
             >
-              <ArrowPathIcon className="h-6 w-6 stroke-gray-400 transition-all group-hover:stroke-neon-purple-light sm:h-7 sm:w-7" />
+              <ArrowPathIcon className="h-6 w-6 stroke-gray-400 transition-all group-hover:stroke-neon-blue-light sm:h-7 sm:w-7" />
             </button>
           </div>
         </BasicModal>

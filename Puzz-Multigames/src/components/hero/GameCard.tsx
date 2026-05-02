@@ -11,7 +11,7 @@ export type GameCardPropsType = {
 };
 
 const badgeStyles: Record<string, string> = {
-  purple: "bg-neon-purple/20 text-neon-purple-light border border-neon-purple/30",
+  purple: "bg-neon-blue/20 text-neon-blue-light border border-neon-blue/30",
   cyan: "bg-neon-cyan/20 text-neon-cyan-light border border-neon-cyan/30",
   pink: "bg-neon-pink/20 text-pink-300 border border-neon-pink/30",
   green: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30",
@@ -51,10 +51,10 @@ export default function GameCard(props: GameCardPropsType) {
         background: "rgba(255,255,255,0.04)",
         backdropFilter: "blur(16px)",
         border: isHovered
-          ? "1px solid rgba(139,92,246,0.5)"
+          ? "1px solid rgba(59,130,246,0.5)"
           : "1px solid rgba(255,255,255,0.08)",
         boxShadow: isHovered
-          ? "0 20px 60px rgba(0,0,0,0.5), 0 0 30px rgba(139,92,246,0.2)"
+          ? "0 20px 60px rgba(0,0,0,0.5), 0 0 30px rgba(59,130,246,0.2)"
           : "0 4px 24px rgba(0,0,0,0.3)",
         transform: isHovered ? "translateY(-6px)" : "translateY(0)",
       }}
@@ -67,7 +67,7 @@ export default function GameCard(props: GameCardPropsType) {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(105deg, transparent 40%, rgba(139,92,246,0.08) 50%, transparent 60%)",
+              "linear-gradient(105deg, transparent 40%, rgba(59,130,246,0.08) 50%, transparent 60%)",
             animation: isHovered ? "shimmer 1.5s infinite" : "none",
           }}
         />
@@ -78,7 +78,7 @@ export default function GameCard(props: GameCardPropsType) {
         {isLoading && (
           <div
             className="absolute inset-0 animate-pulse"
-            style={{ background: "rgba(139,92,246,0.08)" }}
+            style={{ background: "rgba(59,130,246,0.08)" }}
           />
         )}
         <img
@@ -105,8 +105,8 @@ export default function GameCard(props: GameCardPropsType) {
           <div
             className="flex h-14 w-14 items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-110"
             style={{
-              background: "linear-gradient(135deg, #8b5cf6, #06b6d4)",
-              boxShadow: "0 0 30px rgba(139,92,246,0.6)",
+              background: "linear-gradient(135deg, #3b82f6, #06b6d4)",
+              boxShadow: "0 0 30px rgba(59,130,246,0.6)",
             }}
           >
             <svg
@@ -141,7 +141,7 @@ export default function GameCard(props: GameCardPropsType) {
         </p>
 
         {/* Bottom arrow */}
-        <div className="mt-2 flex items-center gap-1 text-xs font-semibold opacity-0 transition-all duration-300 group-hover:opacity-100" style={{ color: "#a78bfa" }}>
+        <div className="mt-2 flex items-center gap-1 text-xs font-semibold opacity-0 transition-all duration-300 group-hover:opacity-100" style={{ color: "#60a5fa" }}>
           Jogar agora
           <svg className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />

@@ -1,0 +1,19 @@
+# Dependências
+node_modules/
+Puzz-Multigames/node_modules/
+
+# Produção
+dist/
+Puzz-Multigames/dist/
+.next/
+out/
+
+# Logs e arquivos de sistema
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Lock files (opcional, mas recomendado manter se for projeto sério)
+# yarn.lock
+# package-lock.json

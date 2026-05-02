@@ -24,8 +24,8 @@ export default function ThemeSwitchButton() {
         border: "1px solid rgba(255,255,255,0.08)",
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.background = "rgba(139,92,246,0.15)";
-        e.currentTarget.style.borderColor = "rgba(139,92,246,0.3)";
+        e.currentTarget.style.background = "rgba(59,130,246,0.15)";
+        e.currentTarget.style.borderColor = "rgba(59,130,246,0.3)";
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.background = "rgba(255,255,255,0.05)";
@@ -33,9 +33,9 @@ export default function ThemeSwitchButton() {
       }}
     >
       {theme === "dark" ? (
-        <SunIcon className="h-4 w-4" style={{ stroke: "#a78bfa" }} />
+        <SunIcon className="h-4 w-4" style={{ stroke: "#60a5fa" }} />
       ) : (
-        <MoonIcon className="h-4 w-4" style={{ stroke: "#a78bfa" }} />
+        <MoonIcon className="h-4 w-4" style={{ stroke: "#60a5fa" }} />
       )}
     </button>
   );

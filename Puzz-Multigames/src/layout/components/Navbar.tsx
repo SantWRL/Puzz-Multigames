@@ -29,7 +29,7 @@ export default function Navbar() {
           backdropFilter: "blur(20px)",
           WebkitBackdropFilter: "blur(20px)",
           borderBottom: scrolled
-            ? "1px solid rgba(139,92,246,0.15)"
+            ? "1px solid rgba(59,130,246,0.15)"
             : "1px solid rgba(255,255,255,0.05)",
           boxShadow: scrolled
             ? "0 4px 30px rgba(0,0,0,0.4)"
@@ -41,7 +41,7 @@ export default function Navbar() {
           <Link to="/" aria-label="Home" className="flex items-center gap-2">
             <span className="h-8 w-8"
               style={{
-                filter: "drop-shadow(0 0 8px rgba(139,92,246,0.6))",
+                filter: "drop-shadow(0 0 8px rgba(59,130,246,0.6))",
               }}
             >
               <Logo />
@@ -49,13 +49,13 @@ export default function Navbar() {
             <span
               className="text-lg font-extrabold tracking-tight"
               style={{
-                background: "linear-gradient(135deg, #a78bfa, #22d3ee)",
+                background: "linear-gradient(135deg, #60a5fa, #22d3ee)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
               }}
             >
-              Puzz
+              Puzz-Multigames
             </span>
           </Link>
         </div>
@@ -70,7 +70,7 @@ export default function Navbar() {
             className="flex h-9 w-9 items-center justify-center rounded-xl transition-all duration-200 lg:hidden"
             style={{
               background: open
-                ? "rgba(139,92,246,0.2)"
+                ? "rgba(59,130,246,0.2)"
                 : "rgba(255,255,255,0.05)",
               border: "1px solid rgba(255,255,255,0.08)",
             }}
@@ -84,21 +84,21 @@ export default function Navbar() {
               <span
                 className="block h-0.5 w-full rounded-full transition-all duration-300"
                 style={{
-                  background: "#a78bfa",
+                  background: "#60a5fa",
                   transform: open ? "rotate(45deg) translateY(6px)" : "none",
                 }}
               />
               <span
                 className="block h-0.5 w-full rounded-full transition-all duration-300"
                 style={{
-                  background: "#a78bfa",
+                  background: "#60a5fa",
                   opacity: open ? 0 : 1,
                 }}
               />
               <span
                 className="block h-0.5 w-full rounded-full transition-all duration-300"
                 style={{
-                  background: "#a78bfa",
+                  background: "#60a5fa",
                   transform: open ? "rotate(-45deg) translateY(-6px)" : "none",
                 }}
               />
@@ -127,7 +127,7 @@ export default function Navbar() {
           className="absolute left-0 top-0 bottom-0 w-72 overflow-y-auto scrollbar-thin transition-transform duration-300 ease-out"
           style={{
             background: "rgba(15,15,26,0.98)",
-            borderRight: "1px solid rgba(139,92,246,0.2)",
+            borderRight: "1px solid rgba(59,130,246,0.2)",
             boxShadow: "4px 0 40px rgba(0,0,0,0.5)",
             transform: open ? "translateX(0)" : "translateX(-100%)",
           }}
@@ -140,20 +140,20 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
             >
               <span className="h-9 w-9"
-                style={{ filter: "drop-shadow(0 0 8px rgba(139,92,246,0.6))" }}
+                style={{ filter: "drop-shadow(0 0 8px rgba(59,130,246,0.6))" }}
               >
                 <Logo />
               </span>
               <span
                 className="text-xl font-extrabold tracking-tight"
                 style={{
-                  background: "linear-gradient(135deg, #a78bfa, #22d3ee)",
+                  background: "linear-gradient(135deg, #60a5fa, #22d3ee)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
                 }}
               >
-                Puzz
+                Puzz-Multigames
               </span>
             </Link>
 

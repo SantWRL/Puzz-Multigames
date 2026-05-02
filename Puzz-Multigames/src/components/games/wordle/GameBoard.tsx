@@ -300,7 +300,7 @@ export default function TestingWordleBoard() {
 
   return (
     <div className="flex w-full flex-col items-center justify-center gap-4">
-      <PageMeta title="ManyGames | Wordle" description="Play online wordle" />
+      <PageMeta title="Puzz-Multigames | Wordle" description="Play online wordle" />
       <div className="flex flex-col gap-4 lg:flex-row-reverse">
         <div className="flex w-full justify-end gap-2 lg:flex-col-reverse">
           <button

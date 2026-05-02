@@ -176,7 +176,7 @@ export default function RacerBoard() {
   return (
     <>
       <PageMeta
-        title="ManyGames | Neon Racer"
+        title="Puzz-Multigames | Neon Racer"
         description="Corra o mais rápido que puder e desvie dos obstáculos na pista Neon."
       />
       <div className="relative flex flex-col items-center justify-center gap-6 lg:flex-row-reverse lg:items-start lg:justify-start lg:pt-8">

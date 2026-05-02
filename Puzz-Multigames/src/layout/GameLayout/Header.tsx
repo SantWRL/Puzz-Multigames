@@ -29,9 +29,9 @@ export default function Header() {
             <span
               className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110"
               style={{
-                background: "linear-gradient(135deg, rgba(139,92,246,0.3), rgba(6,182,212,0.2))",
-                border: "1px solid rgba(139,92,246,0.3)",
-                boxShadow: "0 0 20px rgba(139,92,246,0.2)",
+                background: "linear-gradient(135deg, rgba(59,130,246,0.3), rgba(6,182,212,0.2))",
+                border: "1px solid rgba(59,130,246,0.3)",
+                boxShadow: "0 0 20px rgba(59,130,246,0.2)",
               }}
             >
               <Logo />
@@ -40,7 +40,7 @@ export default function Header() {
               <span
                 className="text-lg font-extrabold leading-none tracking-tight transition-all duration-300"
                 style={{
-                  background: "linear-gradient(135deg, #f1f5f9, #a78bfa)",
+                  background: "linear-gradient(135deg, #f1f5f9, #60a5fa)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -81,7 +81,7 @@ export default function Header() {
             right: 0,
             height: "200px",
             background:
-              "linear-gradient(to top, rgba(139,92,246,0.05), transparent)",
+              "linear-gradient(to top, rgba(59,130,246,0.05), transparent)",
             pointerEvents: "none",
           }}
         />

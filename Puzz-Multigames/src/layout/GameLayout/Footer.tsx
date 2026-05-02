@@ -22,9 +22,9 @@ export default function Footer() {
             color: "#64748b",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "rgba(139,92,246,0.1)";
-            e.currentTarget.style.borderColor = "rgba(139,92,246,0.3)";
-            e.currentTarget.style.color = "#a78bfa";
+            e.currentTarget.style.background = "rgba(59,130,246,0.1)";
+            e.currentTarget.style.borderColor = "rgba(59,130,246,0.3)";
+            e.currentTarget.style.color = "#60a5fa";
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = "rgba(255,255,255,0.03)";
@@ -47,12 +47,12 @@ export default function Footer() {
             rel="noopener noreferrer"
             aria-label="Link para o perfil de Patrick Santos"
             href="https://github.com/SantWRL"
-            style={{ color: "#8b5cf6" }}
+            style={{ color: "#3b82f6" }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.color = "#a78bfa";
+              e.currentTarget.style.color = "#60a5fa";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.color = "#8b5cf6";
+              e.currentTarget.style.color = "#3b82f6";
             }}
           >
             Patrick Santos · SantWRL

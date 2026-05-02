@@ -16,15 +16,15 @@ export type NewGameTileProps = {
 const colors: any = {
   2: "bg-white/5 text-gray-300 border border-white/10",
   4: "bg-white/10 text-gray-200 border border-white/20",
-  8: "bg-neon-purple/20 text-neon-purple-light border border-neon-purple/30",
-  16: "bg-neon-purple/40 text-neon-purple border border-neon-purple/50 shadow-[0_0_15px_rgba(139,92,246,0.2)]",
+  8: "bg-neon-blue/20 text-neon-blue-light border border-neon-blue/30",
+  16: "bg-neon-blue/40 text-neon-blue border border-neon-blue/50 shadow-[0_0_15px_rgba(59,130,246,0.2)]",
   32: "bg-neon-cyan/20 text-neon-cyan-light border border-neon-cyan/30",
   64: "bg-neon-cyan/40 text-neon-cyan border border-neon-cyan/50 shadow-[0_0_15px_rgba(6,182,212,0.2)]",
   128: "bg-neon-pink/20 text-pink-300 border border-neon-pink/30",
   256: "bg-neon-pink/40 text-pink-400 border border-neon-pink/50 shadow-[0_0_15px_rgba(236,72,153,0.2)]",
-  512: "bg-gradient-to-br from-neon-purple/60 to-neon-cyan/60 text-white border border-neon-cyan/60 shadow-[0_0_20px_rgba(139,92,246,0.3)]",
-  1024: "bg-gradient-to-br from-neon-pink/60 to-neon-purple/60 text-white border border-neon-pink/60 shadow-[0_0_20px_rgba(236,72,153,0.3)]",
-  2048: "bg-gradient-to-br from-neon-cyan to-neon-purple text-white shadow-[0_0_30px_rgba(6,182,212,0.6)] border-none animate-pulse",
+  512: "bg-gradient-to-br from-neon-blue/60 to-neon-cyan/60 text-white border border-neon-cyan/60 shadow-[0_0_20px_rgba(59,130,246,0.3)]",
+  1024: "bg-gradient-to-br from-neon-pink/60 to-neon-blue/60 text-white border border-neon-pink/60 shadow-[0_0_20px_rgba(236,72,153,0.3)]",
+  2048: "bg-gradient-to-br from-neon-cyan to-neon-blue text-white shadow-[0_0_30px_rgba(6,182,212,0.6)] border-none animate-pulse",
 };
 
 export function NewGameTile({ tile }: NewGameTileProps) {

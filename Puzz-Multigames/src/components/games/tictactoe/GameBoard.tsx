@@ -118,7 +118,7 @@ export default function TicTacToeBoard() {
   return (
     <>
       <PageMeta
-        title="ManyGames | Jogo da Velha"
+        title="Puzz-Multigames | Jogo da Velha"
         description="O clássico jogo da velha com um visual Dark Neon premium."
       />
       <div className="flex w-full flex-col-reverse items-center gap-10 lg:flex-row lg:items-start lg:justify-center lg:pt-8">

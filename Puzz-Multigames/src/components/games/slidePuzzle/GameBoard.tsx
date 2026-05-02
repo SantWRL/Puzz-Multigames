@@ -218,7 +218,7 @@ export default function SlidePuzzleBoard() {
   return (
     <>
       <PageMeta
-        title="ManyGames | Slide Puzzle"
+        title="Puzz-Multigames | Slide Puzzle"
         description="Play sliding puzzle online with different levels of difficulties"
       />
       <canvas ref={canvasRef} className="hidden" />

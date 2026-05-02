@@ -1,10 +1,10 @@
-<div align="center"
-  <h1>Puzz</h1>
+<div align="center">
+  <h1>Puzz-Multigames</h1>
   <p><strong>Hub de Jogos Moderno e Offline (PWA)</strong></p>
 </div>
 
 <div align="center">
-Bem-vindo ao <strong>Puzz</strong>, um hub de jogos clássicos totalmente refeito para a web moderna. Divirta-se com jogos envolventes, jogue offline e experimente uma nova interface <em>Dark Neon</em>. ✨🎮
+Bem-vindo ao <strong>Puzz-Multigames</strong>, um hub de jogos clássicos totalmente refeito para a web moderna. Divirta-se com jogos envolventes, jogue offline e experimente uma nova interface <em>Dark Neon</em>. ✨🎮
 </div>
 <br/>
 
@@ -20,7 +20,7 @@ Este projeto foi construído utilizando tecnologias modernas de front-end:
 
 ## 🧩 Jogos Disponíveis (7 no total)
 
-Atualmente, o Puzz conta com uma coleção variada de jogos, cada um com sua própria identidade visual neon:
+Atualmente, o Puzz-Multigames conta com uma coleção variada de jogos, cada um com sua própria identidade visual neon:
 
 - **2048**: Combine blocos para alcançar o mágico 2048! 
 - **Wordle**: Adivinhe a palavra secreta em 6 tentativas. 
@@ -51,8 +51,9 @@ Siga os passos abaixo para rodar o projeto localmente:
 ### 1. Clonar o repositório
 
 ```sh
-git clone https://github.com/SantWRL/Puzz.git
-cd Puzz
+git clone https://github.com/SantWRL/Puzz-Multigames.git
+cd Puzz-Multigames
+cd Puzz-Multigames
 ```
 
 ### 2. Instalar dependências

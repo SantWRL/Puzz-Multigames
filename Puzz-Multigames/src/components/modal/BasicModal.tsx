@@ -55,12 +55,12 @@ export function BasicModal(props: BasicModalProps) {
               <Dialog.Panel
                 className={classNames(
                   "max-h-[calc(100vh-56px)] w-full transform overflow-y-auto rounded-2xl p-6 text-left align-middle shadow-2xl transition-all",
-                  "bg-[#0a0a0f] border border-neon-purple/30 shadow-[0_0_40px_rgba(139,92,246,0.15)]",
+                  "bg-[#0a0a0f] border border-neon-blue/30 shadow-[0_0_40px_rgba(59,130,246,0.15)]",
                   className ?? "max-w-md",
                 )}
               >
                 <div className="flex items-center justify-between">
-                  <Dialog.Title className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neon-purple-light to-neon-cyan">
+                  <Dialog.Title className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neon-blue-light to-neon-cyan">
                     {title ?? "Modal"}
                   </Dialog.Title>
                   <button onClick={() => closeModal(false)}>
@@ -78,7 +78,7 @@ export function BasicModal(props: BasicModalProps) {
                       className={classNames(
                         showInitially
                           ? "bg-gray-700"
-                          : "bg-neon-purple shadow-[0_0_10px_rgba(139,92,246,0.6)]",
+                          : "bg-neon-blue shadow-[0_0_10px_rgba(59,130,246,0.6)]",
                         "bg-vsdark-500 dark:bg-vsdark-500 relative flex h-5 w-10 items-center gap-4 rounded-full px-1 py-3 text-xs font-semibold dark:ring-1 dark:ring-gray-300/20 sm:h-6 sm:w-12",
                       )}
                     >
