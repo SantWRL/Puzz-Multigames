@@ -300,7 +300,7 @@ export default function TestingWordleBoard() {
 
   return (
     <div className="flex w-full flex-col items-center justify-center gap-4">
-      <PageMeta title="Puzz-Multigames | Wordle" description="Play online wordle" />
+      <PageMeta title="Puzz-Multigames | Wordle" description="Jogue Wordle online em Português" />
       <div className="flex flex-col gap-4 lg:flex-row-reverse">
         <div className="flex w-full justify-end gap-2 lg:flex-col-reverse">
           <button
@@ -396,14 +396,11 @@ export default function TestingWordleBoard() {
           </div>
           <div className="mt-2">
             <div className="text-base text-gray-500">
-              Definição{" "}
+              Dica:{" "}
               {wordDefination && (
                 <span className="text-md font-semibold text-emerald-500">
                   "
-                  {wordDefination.replace(
-                    wordDefination[0],
-                    wordDefination[0].toLocaleUpperCase(),
-                  )}
+                  {wordDefination}
                   "
                 </span>
               )}

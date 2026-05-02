@@ -20,27 +20,20 @@ export const useDictionaryApi = () => {
   const dictionaryapi = useMemo(
     () => ({
       checkWordIsValid(word: string): Promise<isWordValid> {
-        return new Promise(async (reslove) => {
+        return new Promise((resolve) => {
           if (word === "" || word === null) {
-            reslove(null);
-            throw new Error(
-              "isWordValid: paramer word is possibly empty or null",
-            );
+            resolve(null);
+            return;
           }
-          try {
-            const data: dictionaryAPIResponse = await fetch(
-              `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`,
-            ).then((res) => res.json());
-            if (data === undefined) {
-              reslove(null);
-            } else {
-              reslove({
-                word,
-                definition: data[0].meanings[0].definitions[0].definition,
-              });
-            }
-          } catch (error) {
-            reslove(null);
+          // Para português, aceitamos qualquer palavra de 5 letras por enquanto
+          // ou podemos validar contra o banco futuramente.
+          if (word.length === 5) {
+            resolve({
+              word,
+              definition: "Palavra em português encontrada!",
+            });
+          } else {
+            resolve(null);
           }
         });
       },

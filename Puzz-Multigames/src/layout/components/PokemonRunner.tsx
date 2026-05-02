@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import ConfettiComponent from "../../components/modal/ConfettiComponent";
 
 interface Runner {
@@ -13,29 +14,34 @@ interface Runner {
 }
 
 export default function PokemonRunner() {
+  const location = useLocation();
   const [runners, setRunners] = useState<Runner[]>([]);
   const [guess, setGuess] = useState("");
   const [activeCatch, setActiveCatch] = useState<Runner | null>(null);
   const [showConfetti, setShowConfetti] = useState(false);
   const nextId = useRef(0);
 
+  // Apenas renderiza se estiver na Home
+  const isHome = location.pathname === "/";
+
   const spawnPokemon = async () => {
+    if (!isHome) return;
     try {
       const id = Math.floor(Math.random() * 151) + 1; // Gen 1
       const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
       const data = await res.json();
       
       const direction = Math.random() > 0.5 ? 1 : -1;
-      const x = direction === 1 ? -100 : window.innerWidth + 100;
-      const y = Math.random() * (window.innerHeight - 200) + 100;
+      const x = direction === 1 ? -150 : window.innerWidth + 150;
+      const y = Math.random() * (window.innerHeight - 250) + 100;
       
       const newRunner: Runner = {
         id: nextId.current++,
         name: data.name,
-        image: data.sprites.versions["generation-v"]["black-white"].animated.front_default || data.sprites.front_default,
+        image: data.sprites.versions?.["generation-v"]?.["black-white"]?.animated?.front_default || data.sprites.front_default,
         x,
         y,
-        speed: Math.random() * 2 + 1,
+        speed: Math.random() * 1.5 + 1,
         direction,
         caught: false
       };
@@ -47,15 +53,18 @@ export default function PokemonRunner() {
   };
 
   useEffect(() => {
+    if (!isHome) return;
+    // Frequência reduzida: checa a cada 10 segundos com 20% de chance
     const interval = setInterval(() => {
-      if (Math.random() < 0.3 && runners.length < 3 && !activeCatch) {
+      if (Math.random() < 0.2 && runners.length < 1 && !activeCatch) {
         spawnPokemon();
       }
-    }, 5000);
+    }, 10000);
     return () => clearInterval(interval);
-  }, [runners.length, activeCatch]);
+  }, [runners.length, activeCatch, isHome]);
 
   useEffect(() => {
+    if (!isHome) return;
     const moveInterval = setInterval(() => {
       if (activeCatch) return;
       
@@ -70,7 +79,7 @@ export default function PokemonRunner() {
       });
     }, 16);
     return () => clearInterval(moveInterval);
-  }, [activeCatch]);
+  }, [activeCatch, isHome]);
 
   const handleCatch = (runner: Runner) => {
     setActiveCatch(runner);
@@ -87,12 +96,13 @@ export default function PokemonRunner() {
         setActiveCatch(null);
       }, 3000);
     } else {
-      // Shake or something
       const input = document.getElementById("pk-input");
       input?.classList.add("animate-shake");
       setTimeout(() => input?.classList.remove("animate-shake"), 500);
     }
   };
+
+  if (!isHome) return null;
 
   return (
     <div className="pointer-events-none fixed inset-0 z-[100] overflow-hidden">
@@ -109,23 +119,23 @@ export default function PokemonRunner() {
           }}
           onClick={() => handleCatch(r)}
         >
-          <img src={r.image} alt="???" className="h-16 w-16 drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
+          <img src={r.image} alt="???" className="h-20 w-20 drop-shadow-[0_0_12px_rgba(59,130,246,0.5)]" />
         </div>
       ))}
 
       {activeCatch && (
-        <div className="pointer-events-auto fixed inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-          <div className="flex flex-col items-center gap-6 rounded-3xl bg-zinc-900 p-8 shadow-2xl ring-2 ring-blue-500/50">
+        <div className="pointer-events-auto fixed inset-0 flex items-center justify-center bg-black/70 backdrop-blur-md">
+          <div className="flex flex-col items-center gap-6 rounded-3xl bg-zinc-900 p-8 shadow-2xl ring-2 ring-blue-500/50 scale-110">
             <h2 className="text-2xl font-black text-white tracking-widest uppercase">Quem é esse Pokémon?</h2>
-            <div className="relative h-48 w-48 rounded-full bg-white/5 flex items-center justify-center p-8">
-               <img src={activeCatch.image} alt="pokemon" className="h-full w-full object-contain brightness-0 invert opacity-50" />
+            <div className="relative h-48 w-48 rounded-full bg-white/5 flex items-center justify-center p-8 border border-white/10">
+               <img src={activeCatch.image} alt="pokemon" className="h-full w-full object-contain brightness-0 invert opacity-40" />
             </div>
             <div className="flex gap-2">
               <input
                 id="pk-input"
                 type="text"
                 autoFocus
-                placeholder="Nome do Pokémon..."
+                placeholder="Nome em inglês..."
                 className="w-64 rounded-xl bg-white/5 p-4 text-center font-bold text-white outline-none ring-1 ring-white/10 focus:ring-blue-500"
                 value={guess}
                 onChange={(e) => setGuess(e.target.value)}

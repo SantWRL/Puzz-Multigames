@@ -3,7 +3,7 @@ import useAutosizeTextArea from "../../../hooks/useAutosizeTextarea";
 import { classNames } from "../../../utility/css";
 import { verifyImageUrl } from "../../../utility/image";
 import { BasicModal, BasicModalProps } from "../../modal/BasicModal";
-import { DEFAULT_PUZZLE_IMG_URL, PUZZLE_SIZES } from "./GameBoard";
+import { DEFAULT_PUZZLE_IMG_URL, PUZZLE_SIZES } from "./constants";
 import { RadioGroup } from "@headlessui/react";
 
 type SlidePuzzleSettingModalProps = {
@@ -11,6 +11,15 @@ type SlidePuzzleSettingModalProps = {
   size: number;
   submit: (imageurl: string, size: number) => void;
 } & BasicModalProps;
+
+const PRESET_IMAGES = [
+  { name: "Padrão", url: DEFAULT_PUZZLE_IMG_URL },
+  { name: "Montanhas", url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1000" },
+  { name: "Cyberpunk", url: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1000" },
+  { name: "Espaço", url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000" },
+  { name: "Abstrato", url: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=1000" },
+  { name: "Gato", url: "https://images.unsplash.com/photo-1514888286872-01d6d37f4672?auto=format&fit=crop&q=80&w=1000" },
+];
 
 export function SlidePuzzleSettingModal(props: SlidePuzzleSettingModalProps) {
   const imageErrorP = useRef<HTMLParagraphElement>(null);
@@ -112,7 +121,40 @@ export function SlidePuzzleSettingModal(props: SlidePuzzleSettingModalProps) {
             </div>
           </RadioGroup>
         </div>
-        <div className="mt-4">
+        <div className="mt-6">
+          <p className="mb-2 text-sm text-zinc-600 dark:text-zinc-400">
+            Escolher um tema
+          </p>
+          <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
+            {PRESET_IMAGES.map((img) => (
+              <button
+                key={img.url}
+                onClick={() => {
+                  setImageUrl(img.url);
+                  setVerifiedImageUrl(img.url);
+                  setShowVerifyImage(true);
+                }}
+                className={classNames(
+                  "relative aspect-square overflow-hidden rounded-lg ring-2 transition-all hover:scale-105",
+                  imageUrl === img.url ? "ring-cyan-500 scale-105 shadow-lg shadow-cyan-500/20" : "ring-transparent grayscale hover:grayscale-0"
+                )}
+              >
+                <img src={img.url} alt={img.name} className="h-full w-full object-cover" />
+                {imageUrl === img.url && (
+                   <div className="absolute inset-0 bg-cyan-500/20 flex items-center justify-center">
+                     <div className="bg-cyan-500 rounded-full p-1">
+                       <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                       </svg>
+                     </div>
+                   </div>
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-6">
           <p className="mb-1 text-sm text-gray-500 dark:text-zinc-400">
             URL da imagem
           </p>

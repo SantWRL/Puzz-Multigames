@@ -19,12 +19,7 @@ import { ErrorMessage } from "./ErrorMessage";
 import { generateRandomTiles, getPositionOfEmptyTile } from "./helper";
 import { splitImageToTiles, verifyImageUrl } from "../../../utility/image";
 import { classNames } from "../../../utility/css";
-
-export const DEFAULT_PUZZLE_IMG_URL = import.meta.env.PROD
-  ? "https://manygames.vercel.app/assets/puzzle.jpg"
-  : "/assets/puzzle.jpg";
-
-export const PUZZLE_SIZES = [3, 4, 5, 6] as const;
+import { DEFAULT_PUZZLE_IMG_URL, PUZZLE_SIZES } from "./constants";
 
 export type MoveDirection = "UP" | "DOWN" | "RIGHT" | "LEFT";
 
@@ -71,14 +66,19 @@ export default function SlidePuzzleBoard() {
     let imageValidity = false;
     imageValidity = await verifyImageUrl(imageUrl);
     if (imageValidity) {
-      const splitImageResponse = await splitImageToTiles(
-        imageUrl,
-        canvasRef,
-        size,
-        size,
-      );
-      setImageTiles(splitImageResponse.images);
-      setAspectRatio(splitImageResponse.aspectRatio);
+      try {
+        const splitImageResponse = await splitImageToTiles(
+          imageUrl,
+          canvasRef,
+          size,
+          size,
+        );
+        setImageTiles(splitImageResponse.images);
+        setAspectRatio(splitImageResponse.aspectRatio);
+      } catch (error) {
+        setIsError(true);
+        imageValidity = false;
+      }
     } else {
       setIsError(true);
     }

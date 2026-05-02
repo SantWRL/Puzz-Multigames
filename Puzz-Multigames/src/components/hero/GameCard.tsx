@@ -21,7 +21,7 @@ const badgeStyles: Record<string, string> = {
 };
 
 export default function GameCard(props: GameCardPropsType) {
-  const cardRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLAnchorElement>(null);
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -43,7 +43,7 @@ export default function GameCard(props: GameCardPropsType) {
   return (
     <Link
       to={props.link}
-      ref={cardRef as React.RefObject<HTMLAnchorElement>}
+      ref={cardRef}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="group relative flex flex-col overflow-hidden rounded-2xl transition-all duration-300"

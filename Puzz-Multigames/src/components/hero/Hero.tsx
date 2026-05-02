@@ -111,7 +111,7 @@ export default function Hero() {
             const detail = await res.json();
             return {
               name: detail.name,
-              image: detail.sprites.other["official-artwork"].front_default,
+              image: detail.sprites.other?.["official-artwork"]?.front_default || detail.sprites.front_default,
               type: detail.types[0].type.name,
             };
           })

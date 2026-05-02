@@ -18,26 +18,28 @@ Este projeto foi construído utilizando tecnologias modernas de front-end:
 - **[Tailwind CSS](https://tailwindcss.com/)**: Framework CSS utility-first para criação da interface Dark Neon e Glassmorphism.
 - **[LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)**: Para persistência dos dados dos jogos e recordes diretamente no navegador.
 
-## 🧩 Jogos Disponíveis (7 no total)
+## 🧩 Jogos Disponíveis (7 + Minigame Especial)
 
 Atualmente, o Puzz-Multigames conta com uma coleção variada de jogos, cada um com sua própria identidade visual neon:
 
-- **2048**: Combine blocos para alcançar o mágico 2048! 
-- **Wordle**: Adivinhe a palavra secreta em 6 tentativas. 
-- **Quebra-cabeça (Slide Puzzle)**: Deslize as peças para montar a imagem. 
-- **Jogo da Memória (Memory Match)**: Encontre os pares e evite as bombas! 
-- **Cobrinha (Snake Arcade)**: O clássico jogo da cobrinha em uma versão arcade moderna.
-- **Neon Racer**: Um jogo de corrida retrô onde você desvia de obstáculos em alta velocidade. 
-- **Jogo da Velha (Tic-Tac-Toe)**: Desafie um amigo ou a inteligência artificial.
+- **Pokémon Hunter (Minigame)**: Um minigame exclusivo da tela inicial! Capture Pokémons da 1ª geração que correm pela tela adivinhando seus nomes. 🏃‍♂️💨
+- **Wordle (PT-BR)**: O famoso jogo de adivinhação de palavras, agora com um dicionário completo de português brasileiro de 5 letras.
+- **Quebra-cabeça (Slide Puzzle)**: Deslize as peças para montar a imagem. Agora com uma **galeria de temas** (Natureza, Cyberpunk, Espaço, Gatos) e suporte a URLs customizadas. 🧩
+- **2048**: Combine blocos para alcançar o mágico 2048 em uma interface ultra-moderna. 🔢
+- **Jogo da Memória (Memory Match)**: Encontre os pares e evite as bombas! 🃏
+- **Cobrinha (Snake Arcade)**: O clássico jogo da cobrinha em uma versão arcade moderna com efeitos neon. 🐍
+- **Neon Racer**: Um jogo de corrida retrô onde você desvia de obstáculos em alta velocidade. 🏎️
+- **Jogo da Velha (Tic-Tac-Toe)**: Desafie a máquina ou um amigo no clássico 3x3.
 
 ## ✨ Funcionalidades
 
-- **100% em Português (PT-BR)**: Interface e instruções totalmente localizadas para o Brasil.
+- **Identidade Visual "Electric Blue & Gold"**: Uma paleta de cores refinada substituindo o roxo padrão por tons vibrantes de azul e amarelo, proporcionando uma experiência premium.
+- **100% em Português (PT-BR)**: Interface, mensagens e dicionários totalmente localizados para o Brasil.
+- **Minigame Integrado (PokeAPI)**: Integração em tempo real com a PokeAPI para o minigame de captura na Home.
 - **Progressive Web App (PWA)**: Pode ser instalado no celular ou desktop e funciona **totalmente offline**.
-- **Design System "Dark Neon"**: Uma interface escura, elegante, com efeitos em *glassmorphism* e brilho (glow) imersivos.
-- **Inteligência Artificial**: Jogue o Jogo da Velha contra o nosso "O Engine".
-- **Persistência de Recordes**: Seus recordes e pontuações máximas são salvos automaticamente no seu navegador.
-- **Responsivo**: Jogabilidade adaptada para mouse/teclado e controles de toque (*swipe*).
+- **Design System Moderno**: Efeitos em *glassmorphism*, micro-animações e sombras neon imersivas.
+- **Persistência de Recordes**: Seus recordes e pontuações máximas são salvos automaticamente via `localStorage`.
+- **Controles Adaptáveis**: Suporte total para Mouse, Teclado (setas e WASD) e gestos de Toque (*swipe*).
 
 ## 🛠️ Como rodar o projeto
 
