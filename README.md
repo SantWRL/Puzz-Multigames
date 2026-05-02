@@ -1,5 +1,4 @@
-<div align="center">
-  <img src="./public/assets/manygames.png" width="90" alt="Puzz Logo">
+<div align="center"
   <h1>Puzz</h1>
   <p><strong>Hub de Jogos Moderno e Offline (PWA)</strong></p>
 </div>
