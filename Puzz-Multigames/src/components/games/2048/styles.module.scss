@@ -1,0 +1,104 @@
+.gameBoard {
+  --tile-size: 22vw;
+  --tile-gap: 1vw;
+}
+
+.tile {
+  user-select: none;
+  cursor: default;
+}
+.tile {
+  position: absolute;
+}
+.tile.merged {
+  display: none;
+}
+.tile.merged.isMoving {
+  display: inline-flex;
+}
+
+@keyframes newTile {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.tile.new {
+  animation-duration: 0.2s;
+  animation-name: newTile;
+  animation-fill-mode: forwards;
+  animation-delay: 0.15s;
+  transform: scale(0);
+}
+
+@media screen and (width >= 1024px) {
+  .gameBoard {
+    --tile-size: 18vh;
+    --tile-gap: 1vh;
+  }
+}
+
+@for $row from 0 through 3 {
+  @for $column from 0 through 3 {
+    .pos_#{$row}_#{$column}:not(.isMoving) {
+      top: calc($row * calc(var(--tile-gap) + var(--tile-size)));
+      left: calc($column * calc(var(--tile-gap) + var(--tile-size)));
+    }
+  }
+}
+
+@for $fromRow from 0 through 3 {
+  @for $toRow from 0 through 3 {
+    $name: row_from_#{$fromRow}_to_#{$toRow};
+
+    @if $fromRow == $toRow {
+      .#{$name} {
+        top: calc($toRow * calc(var(--tile-gap) + var(--tile-size)));
+      }
+    } @else {
+      .#{$name} {
+        animation-duration: 0.2s;
+        animation-name: $name;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes #{$name} {
+        from {
+          top: calc($fromRow * calc(var(--tile-gap) + var(--tile-size)));
+        }
+        to {
+          top: calc($toRow * calc(var(--tile-gap) + var(--tile-size)));
+        }
+      }
+    }
+  }
+}
+@for $fromColumn from 0 through 3 {
+  @for $toColumn from 0 through 3 {
+    $name: column_from_#{$fromColumn}_to_#{$toColumn};
+
+    @if $fromColumn == $toColumn {
+      .#{$name} {
+        left: calc($toColumn * calc(var(--tile-gap) + var(--tile-size)));
+      }
+    } @else {
+      .#{$name} {
+        animation-duration: 0.2s;
+        animation-name: $name;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes #{$name} {
+        from {
+          left: calc($fromColumn * calc(var(--tile-gap) + var(--tile-size)));
+        }
+        to {
+          left: calc($toColumn * calc(var(--tile-gap) + var(--tile-size)));
+        }
+      }
+    }
+  }
+}
